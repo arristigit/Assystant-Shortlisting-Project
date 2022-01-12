@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department- Student Count</title>
+</head>
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Department</th>
+            <th scope="col">Student Count</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for d in ls %}
+          <tr>
+            <th scope="row">{{d.dept}}</th>
+            <td>{{d.stu_count}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+    
+      <br>
+      <p>Output: [
+          {% for d in ls %}
+          ({{d.dept}}:{{d.stu_count}})
+          
+          {% if forloop.counter.last %}
+          {% else %}
+          {{comma}}
+          {% endif %}
+          {% endfor %}
+          ]</p>
+</body>
+</html>
