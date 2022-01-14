@@ -28,11 +28,6 @@
       <p>Output: [
           {% for d in ls %}
           ({{d.dept}}:{{d.stu_count}})
-          
-          {% if forloop.counter.last %}
-          {% else %}
-          {{comma}}
-          {% endif %}
           {% endfor %}
           ]</p>
 </body>
